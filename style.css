@@ -180,7 +180,7 @@ p {
 
 .home__avatar {
   width: 280px;
-  height: 340px;
+  height: 350px;
   border: 1px solid var(--color-homeText);
 }
 
@@ -249,4 +249,62 @@ p {
 
 .textBox__period {
   font-size: var(--font-micro);
+}
+
+/* Skills */
+
+.skills {
+  background-color: var(--color-yellow);
+  padding: 30px;
+}
+
+.skillSet {
+  display: flex;
+  background-color: var(--color-light-grey);
+  color: var(--color-light-white);
+  margin: 80px 0;
+}
+
+.skillSet__left__title,
+.tools__title,
+.etc__title {
+  color: var(--color-light-white);
+}
+
+.skillSet__left {
+  background-color: var(--color-dark-grey);
+  flex-basis: 60%;
+  padding: 30px 40px;
+}
+
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill__bar {
+  background-color: var(--color-grey);
+  height: 3px;
+  margin-top: 3px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.skill__value {
+  background-color: var(--color-orange);
+  height: 3px;
+  border-radius: 4px;
+}
+
+.skillSet__right {
+  flex-basis: 40%;
+}
+
+.skillSet__right__tools {
+  background-color: var(--color-grey);
+  padding: 30px;
+}
+
+.skillSet__right__etc {
+  padding: 30px;
 }
