@@ -97,7 +97,7 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 16px;
-  color: var(--color-grey);
+  color: var(--color-light-grey);
 }
 
 .navBar__logo {
@@ -124,13 +124,34 @@ p {
 
 .navBar__menu .menu__item {
   padding: 8px 12px;
+  padding-bottom: 4px;
   margin: 0 4px;
+  font-weight: var(--weight-semi-bold);
 }
 
-.navBar__menu .menu__item:hover {
-  background-color: var(--color-light-white);
-  border-radius: 4px;
-  /* transition: all 300ms ease-in; */
+.navBar__menu .menu__item__bar {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-black);
+  transform: scaleX(0);
+}
+
+.menu__item:hover .menu__item__bar {
+  transform: scaleX(1);
+  transition: transform 300ms ease-in;
+}
+
+.menu__item:hover {
+  color: var(--color-black);
+  transition: transform 300ms ease-in;
+}
+
+.menu__item:not(:hover) {
+  transition: all 300ms ease-out;
+}
+
+.menu__item:not(:hover) .menu__item__bar {
+  transition: all 300ms ease-out;
 }
 
 /* Home */
