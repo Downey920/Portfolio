@@ -97,7 +97,23 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 16px;
+  color: var(--color-homeText);
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+}
+
+.navBar--dark {
+  padding: 10px;
   color: var(--color-light-grey);
+  background-color: var(--color-white);
+  z-index: 1;
+  transition: all 300ms ease-in-out;
+}
+
+.navBar--dark .navBar__logo .logo__text,
+.navBar--dark .navBar__toggleBtn {
+  color: var(--color-dark-grey);
 }
 
 .navBar__logo {
@@ -115,6 +131,7 @@ p {
 .navBar__logo .logo__text {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
+  color: var(--color-homeText);
 }
 
 .navBar__menu {
@@ -159,10 +176,10 @@ p {
   border: none;
   outline: none;
   font-size: var(--font-medium);
-  color: var(--color-black);
+  color: var(--color-homeText);
   position: absolute;
-  top: 18px;
-  right: 10px;
+  top: 15px;
+  right: 15px;
   display: none;
 }
 
@@ -177,7 +194,8 @@ p {
   justify-content: center;
   align-items: center;
   background: url(imgs/background.png) no-repeat center/cover;
-  padding: 120px 0;
+  padding: 160px 0;
+  padding-bottom: 100px;
 }
 
 .home__left {
@@ -522,6 +540,8 @@ p {
   transition: all 300ms ease-in;
 }
 
+/* Responsive */
+
 @media screen and (max-width: 768px) {
   .navBar {
     flex-direction: column;
@@ -529,6 +549,7 @@ p {
   }
 
   .navBar__menu {
+    display: none;
     margin-top: 16px;
     width: 100%;
     flex-direction: column;
@@ -545,6 +566,8 @@ p {
 
   .home {
     flex-direction: column-reverse;
+    padding: 12px;
+    padding-top: 100px;
   }
 
   .home__avatar {
