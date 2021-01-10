@@ -190,10 +190,13 @@ p {
 /* Home */
 
 .home {
+  background: url(imgs/background.png) no-repeat center/cover;
+}
+
+.homeContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(imgs/background.png) no-repeat center/cover;
   padding: 160px 0;
   padding-bottom: 100px;
 }
@@ -595,7 +598,7 @@ p {
     display: block;
   }
 
-  .home {
+  .homeContainer {
     flex-direction: column-reverse;
     padding: 12px;
     padding-top: 100px;
