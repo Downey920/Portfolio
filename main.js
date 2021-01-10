@@ -22,11 +22,19 @@ navbarToggleBtn.addEventListener("click", () => {
 navbarMenu.addEventListener("click", event => {
   const target = event.target;
   const link = target.dataset.link;
-
   if (link === undefined) {
     return;
   }
-
-  const scrollTo = document.querySelector(link);
-  scrollTo.scrollIntoView({ behavior: "smooth" });
+  scrollIntoView(link);
 });
+
+// Handle scrolling when tapping on the contactBtn
+const homeBtn = document.querySelector(".home__btn");
+homeBtn.addEventListener("click", event => {
+  scrollIntoView(".contact");
+});
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+}
