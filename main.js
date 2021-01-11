@@ -28,6 +28,18 @@ navbarMenu.addEventListener("click", event => {
   scrollIntoView(link);
 });
 
+// Menu item state
+const menuItems = document.querySelectorAll(".menu__item");
+navbarMenu.addEventListener("click", event => {
+  menuItems.forEach(item => {
+    if (event.target.dataset.link === item.dataset.link) {
+      item.classList.add("active");
+    } else {
+      item.classList.remove("active");
+    }
+  });
+});
+
 // Handle scrolling when tapping on the contactBtn
 const homeBtn = document.querySelector(".home__btn");
 homeBtn.addEventListener("click", event => {
@@ -55,16 +67,23 @@ document.addEventListener("scroll", () => {
   }
 });
 
-//My work filtering
+// My work filtering
 const categories = document.querySelector(".myWork__categories");
 const projectContainer = document.querySelector(".myWork__projects");
 const projects = document.querySelectorAll(".project");
 categories.addEventListener("click", event => {
-  const target = event.target;
+  let target = event.target;
   const filter = target.dataset.filter || target.parentNode.dataset.filter;
   if (filter === undefined) {
     return;
   }
+
+  // Remove selection from the previous item and select the new one
+  const activeBtn = document.querySelector(".categoryBtn.active");
+  activeBtn.classList.remove("active");
+  target = target.nodeName === "BUTTON" ? target : target.parentNode;
+
+  target.classList.add("active");
 
   projectContainer.classList.add("anim-out");
 
