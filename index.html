@@ -82,60 +82,62 @@
     </section>
 
     <!-- About -->
-    <section class="about section">
-      <h1 class="about__title">About me</h1>
-      <p class="about__description">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates,
-        quam? Soluta dolores iure praesentium, vel culpa commodi recusandae
-        vitae architecto aliquid a deserunt ratione est voluptate harum cumque
-        repudiandae blanditiis!
-      </p>
+    <section class="about">
+      <div class="section">
+        <h1 class="about__title">About me</h1>
+        <p class="about__description">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates,
+          quam? Soluta dolores iure praesentium, vel culpa commodi recusandae
+          vitae architecto aliquid a deserunt ratione est voluptate harum cumque
+          repudiandae blanditiis!
+        </p>
 
-      <div class="about__majors">
-        <div class="major">
-          <div class="major__img">
-            <i class="fab fa-html5"></i>
+        <div class="about__majors">
+          <div class="major">
+            <div class="major__img">
+              <i class="fab fa-html5"></i>
+            </div>
+            <h2 class="major__name">HTML</h2>
+            <h3 class="major__description">MarkUp Language...</h3>
           </div>
-          <h2 class="major__name">HTML</h2>
-          <h3 class="major__description">MarkUp Language...</h3>
-        </div>
-        <div class="major">
-          <div class="major__img">
-            <i class="fab fa-css3-alt"></i>
+          <div class="major">
+            <div class="major__img">
+              <i class="fab fa-css3-alt"></i>
+            </div>
+            <h2 class="major__name">CSS</h2>
+            <h3 class="major__description">CasCading Style Sheets...</h3>
           </div>
-          <h2 class="major__name">CSS</h2>
-          <h3 class="major__description">CasCading Style Sheets...</h3>
-        </div>
-        <div class="major">
-          <div class="major__img">
-            <i class="fab fa-js-square"></i>
+          <div class="major">
+            <div class="major__img">
+              <i class="fab fa-js-square"></i>
+            </div>
+            <h2 class="major__name">JavaScript</h2>
+            <h3 class="major__description">ECMAScript...</h3>
           </div>
-          <h2 class="major__name">JavaScript</h2>
-          <h3 class="major__description">ECMAScript...</h3>
         </div>
-      </div>
 
-      <div class="about__careers">
-        <div class="career">
-          <img
-            src="imgs/careers/경기고.png"
-            alt="경기 고등학교"
-            class="career__img"
-          />
-          <div class="career__textBox">
-            <div class="textBox__name">경기 고등학교 (High School)</div>
-            <div class="textBox__period">2008.3 ~ 2011.2</div>
+        <div class="about__careers">
+          <div class="career">
+            <img
+              src="imgs/careers/경기고.png"
+              alt="경기 고등학교"
+              class="career__img"
+            />
+            <div class="career__textBox">
+              <div class="textBox__name">경기 고등학교 (High School)</div>
+              <div class="textBox__period">2008.3 ~ 2011.2</div>
+            </div>
           </div>
-        </div>
-        <div class="career">
-          <img
-            src="imgs/careers/서경대.png"
-            alt="서경 대학교"
-            class="career__img"
-          />
-          <div class="career__textBox">
-            <div class="textBox__name">서경 대학교 (University)</div>
-            <div class="textBox__period">2013.3 ~ 2020.8</div>
+          <div class="career">
+            <img
+              src="imgs/careers/서경대.png"
+              alt="서경 대학교"
+              class="career__img"
+            />
+            <div class="career__textBox">
+              <div class="textBox__name">서경 대학교 (University)</div>
+              <div class="textBox__period">2013.3 ~ 2020.8</div>
+            </div>
           </div>
         </div>
       </div>
@@ -230,47 +232,57 @@
     </section>
 
     <!-- My Work -->
-    <section class="myWork section">
-      <h1 class="myWork__title">My work</h1>
-      <h2 class="myWork__subTitle">Projects</h2>
-      <div class="myWork__categories">
-        <button class="categoryBtn active" data-filter="*">
-          All <span class="category__count">3</span>
-        </button>
-        <button class="categoryBtn" data-filter="HTML_CSS">
-          HTML + CSS<span class="category__count">2</span>
-        </button>
-        <button class="categoryBtn" data-filter="HTML_CSS_JS">
-          HTML + CSS + JS<span class="category__count">1</span>
-        </button>
-      </div>
+    <section class="myWork">
+      <div class="section">
+        <h1 class="myWork__title">My work</h1>
+        <h2 class="myWork__subTitle">Projects</h2>
+        <div class="myWork__categories">
+          <button class="categoryBtn active" data-filter="*">
+            All <span class="category__count">3</span>
+          </button>
+          <button class="categoryBtn" data-filter="HTML_CSS">
+            HTML + CSS<span class="category__count">2</span>
+          </button>
+          <button class="categoryBtn" data-filter="HTML_CSS_JS">
+            HTML + CSS + JS<span class="category__count">1</span>
+          </button>
+        </div>
 
-      <div class="myWork__projects">
-        <a href="#" class="project" target="_blank" data-type="HTML_CSS"
-          ><img class="project__img" src="imgs/projects/HTML__img.png" alt="" />
-          <div class="project__description">
-            <h3>HTML</h3>
-            <span>abcde</span>
-          </div></a
-        >
-        <a href="#" class="project" target="_blank" data-type="HTML_CSS"
-          ><img class="project__img" src="imgs/projects/CSS__img.png" alt="" />
-          <div class="project__description">
-            <h3>CSS</h3>
-            <span>abcde</span>
-          </div></a
-        >
-        <a href="#" class="project" target="_blank" data-type="HTML_CSS_JS"
-          ><img
-            class="project__img"
-            src="imgs/projects/JavaScript__img.png"
-            alt=""
-          />
-          <div class="project__description">
-            <h3>JavaScript</h3>
-            <span>abcde</span>
-          </div></a
-        >
+        <div class="myWork__projects">
+          <a href="#" class="project" target="_blank" data-type="HTML_CSS"
+            ><img
+              class="project__img"
+              src="imgs/projects/HTML__img.png"
+              alt=""
+            />
+            <div class="project__description">
+              <h3>HTML</h3>
+              <span>description</span>
+            </div></a
+          >
+          <a href="#" class="project" target="_blank" data-type="HTML_CSS"
+            ><img
+              class="project__img"
+              src="imgs/projects/CSS__img.png"
+              alt=""
+            />
+            <div class="project__description">
+              <h3>CSS</h3>
+              <span>description</span>
+            </div></a
+          >
+          <a href="#" class="project" target="_blank" data-type="HTML_CSS_JS"
+            ><img
+              class="project__img"
+              src="imgs/projects/JavaScript__img.png"
+              alt=""
+            />
+            <div class="project__description">
+              <h3>JavaScript</h3>
+              <span>description</span>
+            </div></a
+          >
+        </div>
       </div>
     </section>
 

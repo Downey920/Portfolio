@@ -25,19 +25,8 @@ navbarMenu.addEventListener("click", event => {
   if (link === undefined) {
     return;
   }
+  navbar.classList.remove("open");
   scrollIntoView(link);
-});
-
-// Menu item state
-const menuItems = document.querySelectorAll(".menu__item");
-navbarMenu.addEventListener("click", event => {
-  menuItems.forEach(item => {
-    if (event.target.dataset.link === item.dataset.link) {
-      item.classList.add("active");
-    } else {
-      item.classList.remove("active");
-    }
-  });
 });
 
 // Handle scrolling when tapping on the contactBtn
@@ -102,4 +91,67 @@ categories.addEventListener("click", event => {
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
+  selectedItem(menuItems[menuItems.indexOf(selector)]);
 }
+
+// 1. 모든 섹션 요소들을 가지고 온다
+// 2. IntersectionObserver를 이용해서 모든 섹션들을 관찰한다
+// 3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 시킨다
+
+const sectionClass = [
+  ".home",
+  ".about",
+  ".skills",
+  ".myWork",
+  ".testimonial",
+  ".contact",
+];
+const menuItems = document.querySelectorAll(".menu__item");
+
+const sections = sectionClass.map(section => {
+  return document.querySelector(section);
+});
+
+let selectedNavItem = menuItems[0];
+let selectedNavIndex = 0;
+
+function selectedItem(selected) {
+  selectedNavItem.classList.remove("active");
+  selectedNavItem = selected;
+  selectedNavItem.classList.add("active");
+}
+
+const options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.3,
+};
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.boundingClientRect)
+      if (!entry.isIntersecting && entry.intersectionRatio > 0) {
+        const index = sectionClass.indexOf(`.${entry.target.className}`);
+        if (entry.boundingClientRect.y < 0) {
+          selectedNavIndex = index + 1;
+        } else {
+          selectedNavIndex = index - 1;
+        }
+      }
+  });
+}, options);
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+
+window.addEventListener("scroll", () => {
+  console.log(scrollY);
+  console.log(scrollY + innerHeight);
+  if (scrollY === 0) {
+    selectedItem(menuItems[0]);
+  } else if (scrollY + innerHeight >= document.body.clientHeight - 30) {
+    selectedItem(menuItems[menuItems.length - 1]);
+  } else {
+    selectedItem(menuItems[selectedNavIndex]);
+  }
+});
