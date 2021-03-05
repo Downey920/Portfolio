@@ -394,6 +394,10 @@ p {
   padding: 30px;
 }
 
+.skillSet__right__tools .tools__list .tools__list__item {
+  margin-bottom: 4px;
+}
+
 .skillSet__right__etc {
   padding: 30px;
 }
