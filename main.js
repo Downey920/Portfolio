@@ -42,6 +42,11 @@ document.addEventListener("scroll", () => {
   homeContainer.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
+// Animation Elements on the Home Screen
+addEventListener("load", () => {
+  setTimeout(() => homeContainer.classList.add("show"), 300);
+});
+
 // Show "arrow up" button when scrolling down & Handle click on "arrow up"
 const arrowBtn = document.querySelector(".arrowBtn");
 arrowBtn.addEventListener("click", () => {
@@ -116,6 +121,9 @@ let selectedNavItem = menuItems[0];
 let selectedNavIndex = 0;
 
 function selectedItem(selected) {
+  if (selected === menuItems[1]) homeContainer.classList.remove("show");
+  else if (selected === menuItems[0]) homeContainer.classList.add("show");
+
   selectedNavItem.classList.remove("active");
   selectedNavItem = selected;
   selectedNavItem.classList.add("active");
@@ -145,8 +153,6 @@ sections.forEach(section => {
 });
 
 window.addEventListener("scroll", () => {
-  console.log(scrollY);
-  console.log(scrollY + innerHeight);
   if (scrollY === 0) {
     selectedItem(menuItems[0]);
   } else if (scrollY + innerHeight >= document.body.clientHeight - 30) {

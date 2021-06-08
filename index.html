@@ -29,12 +29,12 @@
       <!-- NavBar Logo -->
       <div class="navBar__logo">
         <img src="imgs/logo.png" alt="" class="logo__img" />
-        <a href="#" class="logo__text">Downey</a>
+        <a href="/" class="logo__text">Downey</a>
       </div>
 
       <!-- NavBar Menu -->
       <ul class="navBar__menu">
-        <li class="menu__item" data-link=".home">
+        <li class="menu__item active" data-link=".home">
           Home
           <div class="menu__item__bar"></div>
         </li>
@@ -67,12 +67,22 @@
     <section class="home">
       <div class="homeContainer">
         <div class="home__left">
-          <h1 class="home__title">나다운,<br />Front-End</h1>
-          <h2 class="home__description">A Software Engineer</h2>
-          <button class="home__btn">CONTACT ME</button>
+          <h1 class="home__title back-to-position to-right delay-0">
+            나다운,<br />Front-End
+          </h1>
+          <h2 class="home__description back-to-position to-right delay-1">
+            A Software Engineer
+          </h2>
+          <div class="btnContainer back-to-position to-right delay-2">
+            <button class="home__btn">CONTACT ME</button>
+          </div>
         </div>
         <div class="home__right">
-          <img src="imgs/avatar.png" alt="Profile photo" class="home__avatar" />
+          <img
+            src="imgs/avatar.png"
+            alt="Profile photo"
+            class="home__avatar back-to-position to-left delay-3"
+          />
         </div>
       </div>
     </section>
