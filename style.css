@@ -264,8 +264,8 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 160px 0;
-  padding-bottom: 100px;
+  padding: 180px 0;
+  padding-bottom: 140px;
 }
 
 .home__left {
@@ -426,16 +426,17 @@ p {
 
 .skill__bar {
   background-color: var(--color-grey);
-  height: 3px;
-  margin-top: 3px;
-  margin-bottom: 20px;
-  border-radius: 4px;
+  height: 5px;
+  margin-top: 5px;
+  margin-bottom: 24px;
+  border-radius: 8px;
 }
 
 .skill__value {
   background-color: var(--color-orange);
-  height: 3px;
-  border-radius: 4px;
+  height: 5px;
+  border-radius: 8px;
+  transition: width 1.5s 100ms ease-out;
 }
 
 .skillSet__right {
@@ -444,7 +445,7 @@ p {
 
 .skillSet__right__tools {
   background-color: var(--color-grey);
-  padding: 30px;
+  padding: 50px;
 }
 
 .skillSet__right__tools .tools__list .tools__list__item {
@@ -452,7 +453,7 @@ p {
 }
 
 .skillSet__right__etc {
-  padding: 30px;
+  padding: 50px;
 }
 
 /* My Work */
@@ -762,7 +763,8 @@ p {
     display: block;
   }
 
-  .navBar.open .menu__item:hover {
+  .navBar.open .menu__item:hover,
+  .navBar.open .menu__item.special:hover {
     color: var(--color-light-grey);
   }
 

@@ -102,6 +102,7 @@ function scrollIntoView(selector) {
 // 1. 모든 섹션 요소들을 가지고 온다
 // 2. IntersectionObserver를 이용해서 모든 섹션들을 관찰한다
 // 3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 시킨다
+// + Animation (Home, Skills)
 
 const sectionClass = [
   ".home",
@@ -120,9 +121,24 @@ const sections = sectionClass.map(section => {
 let selectedNavItem = menuItems[0];
 let selectedNavIndex = 0;
 
+const skillValues = document.querySelectorAll(".skill__value");
+const valuePercent = [70, 70, 60, 50, 60];
+
 function selectedItem(selected) {
+  // Home animation
   if (selected === menuItems[1]) homeContainer.classList.remove("show");
   else if (selected === menuItems[0]) homeContainer.classList.add("show");
+
+  // Skill bar animation
+  if (selected === menuItems[2]) {
+    skillValues.forEach((val, index) => {
+      val.style.width = `${valuePercent[index]}%`;
+    });
+  } else {
+    skillValues.forEach((val, index) => {
+      val.style.width = "0";
+    });
+  }
 
   selectedNavItem.classList.remove("active");
   selectedNavItem = selected;
@@ -132,7 +148,7 @@ function selectedItem(selected) {
 const options = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.3,
+  threshold: 0.4,
 };
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
