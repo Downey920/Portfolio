@@ -266,6 +266,7 @@ p {
   align-items: center;
   padding: 180px 0;
   padding-bottom: 140px;
+  overflow: hidden;
 }
 
 .home__left {
@@ -665,12 +666,12 @@ p {
 
 .arrowBtn {
   position: fixed;
-  right: 15px;
-  bottom: 20px;
+  right: 25px;
+  bottom: 30px;
   background-color: #ff623b;
   display: block;
-  width: 35px;
-  height: 35px;
+  width: 42px;
+  height: 42px;
   text-align: center;
   line-height: 35px;
   border-radius: 50%;
