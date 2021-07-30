@@ -554,7 +554,7 @@ p {
 }
 
 .project__img {
-  width: 100%;
+  max-width: 100%;
   max-height: 100%;
 }
 
@@ -570,6 +570,7 @@ p {
   justify-content: center;
   opacity: 0;
   transform: translateY(10px);
+  cursor: pointer;
 }
 
 .project:hover .project__description {
@@ -581,10 +582,12 @@ p {
 .project__description h3 {
   color: var(--color-orange);
   font-weight: var(--weight-semi-bold);
+  cursor: pointer;
 }
 
 .project__description span {
   color: var(--color-white);
+  cursor: pointer;
 }
 
 .project__description h3:after {
