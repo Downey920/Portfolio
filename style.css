@@ -326,7 +326,6 @@ p {
 }
 
 .about__description {
-  display: flex;
 }
 
 .description__profile,
@@ -406,6 +405,17 @@ p {
   background-color: var(--color-light-grey);
   color: var(--color-light-white);
   margin: 80px 0;
+}
+
+.tools__title::after,
+.etc__title::after {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 2px;
+  margin: 8px auto 16px;
+  background-color: var(--color-orange);
+  border-radius: 50%;
 }
 
 .skillSet__left__title,
@@ -544,7 +554,7 @@ p {
 }
 
 .project__img {
-  max-width: 100%;
+  width: 100%;
   max-height: 100%;
 }
 
@@ -833,6 +843,11 @@ p {
 
   .skillSet {
     flex-direction: column;
+  }
+
+  .tools__title::after,
+  .etc__title::after {
+    width: 30%;
   }
 
   .myWork__categories {
