@@ -30,10 +30,10 @@ navbarMenu.addEventListener("click", event => {
 });
 
 // Handle scrolling when tapping on the contactBtn
-const homeBtn = document.querySelector(".home__btn");
-homeBtn.addEventListener("click", event => {
-  scrollIntoView(".contact");
-});
+// const homeBtn = document.querySelector(".home__btn");
+// homeBtn.addEventListener("click", event => {
+//   scrollIntoView(".contact");
+// });
 
 // Make home slowly fade to transparent as the window scrolls down
 const homeContainer = document.querySelector(".homeContainer");
