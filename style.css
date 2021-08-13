@@ -543,8 +543,8 @@ p {
 }
 
 .project {
-  width: 280px;
-  height: 250px;
+  width: 290px;
+  height: 260px;
   margin: 2px;
   position: relative;
   background-color: var(--color-light-white);
